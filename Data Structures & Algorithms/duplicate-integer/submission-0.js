@@ -1,0 +1,16 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+        const cache = new Set();
+
+        for (let i = 0; i < nums.length; i++) {
+            if (cache.has(nums[i])) return true;
+            cache.add(nums[i]);
+        }
+
+        return false;
+    }
+}
